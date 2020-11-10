@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./rajWish.css">
     <title>Wish_List</title>
 </head>
-<body>
+<body onload="initClock()">
     <header>
         <h1>Raj's Wish List</h1>
     </header>
@@ -25,30 +25,7 @@
         <span id="period">AM</span>
      </div>
     </div>
-    <script>
-        function updateClock(){
-    var now = new Date();
-    var dname = now.getDay(),
-        mo = now.getMonth(),
-        dnum = now.getDate(),
-        yr = now.getFullYear(),
-        hou = now.getHours(),
-        min = now.getMinutes(),
-        sec = now.getSeconds(),
-        pe = "AM";
-
-        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
-        var values =[week[dname], months[mo], dnum, yr, hou, min, sec, pe];
-        for(var i = 0; i < ids.length; i++)
-        document.getElementById(ids[i]).firstChild.nodeValue = values[i];
-}
-function initClock(){
-    updateClock();
-    window.setInterval("updateClock()", 1);
-}
-    </script>
+    <script src="./clock.js"></script>
     <form>
         <input type="text" class="todo-input" />
         <button class="todo-button" type="submit">
