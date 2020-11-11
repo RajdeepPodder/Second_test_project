@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(120deg,#17e4b7, #140361);
+    background: skyblue;
     color: white;
+    width: 100%;
     min-height: 100vh;
 }
 header{
@@ -90,13 +91,12 @@ select{
 .select{
     margin: 1rem;
     position: relative;
-    overflow: hidden;
 }
 select{
     color: orangered;
     width: 10rem;
     cursor: pointer;
-    padding: 1rem;
+    padding: 1.0rem;
 }
 .select::after{
     content: "\25BC";
@@ -104,7 +104,7 @@ select{
     background: orangered;
     top: 0;
     right: 0;
-    padding: 1rem;
+    padding: 0.9rem;
     pointer-events: none;
     transition: all 0.3s ease;
 }
